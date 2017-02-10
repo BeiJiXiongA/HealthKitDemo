@@ -61,7 +61,7 @@ class ViewController: UIViewController {
         saveButton.frame = CGRect.init(x:WIDTH/2 - 30 , y:inputTextField.frame.origin.y + inputTextField.frame.size.height + 30, width: 60, height: 30)
         saveButton.setTitle("保存", for: .normal)
         saveButton.setTitleColor(UIColor.blue, for: .normal)
-        saveButton.addTarget(self, action: #Selector("saveUserWeight"), for: .touchUpInside)
+        saveButton.addTarget(self, action: #selector(saveUserWeight), for: .touchUpInside)
         self.view.addSubview(saveButton)
 
     }

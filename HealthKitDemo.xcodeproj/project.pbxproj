@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E4022F7D1E51C299000875D7 /* NotificationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4022F7C1E51C298000875D7 /* NotificationHandler.swift */; };
+		E4022F7F1E51C2AD000875D7 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4022F7E1E51C2AD000875D7 /* UserNotifications.framework */; };
+		E4022F811E51C2B4000875D7 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4022F801E51C2B4000875D7 /* NotificationCenter.framework */; };
 		E4120DE21E4C03AE009C8DD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4120DE11E4C03AE009C8DD3 /* AppDelegate.swift */; };
 		E4120DE41E4C03AE009C8DD3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4120DE31E4C03AE009C8DD3 /* ViewController.swift */; };
 		E4120DE91E4C03AE009C8DD3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4120DE81E4C03AE009C8DD3 /* Assets.xcassets */; };
@@ -15,6 +18,7 @@
 		E4120E021E4C03AE009C8DD3 /* HealthKitDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4120E011E4C03AE009C8DD3 /* HealthKitDemoUITests.swift */; };
 		E4120E121E4C03FF009C8DD3 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4120E111E4C03FF009C8DD3 /* HealthKit.framework */; };
 		E4120E141E4C6B11009C8DD3 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4120E131E4C6B11009C8DD3 /* ViewExtension.swift */; };
+		E4120E161E514314009C8DD3 /* HeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4120E151E514314009C8DD3 /* HeightViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +39,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E4022F7C1E51C298000875D7 /* NotificationHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationHandler.swift; sourceTree = "<group>"; };
+		E4022F7E1E51C2AD000875D7 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		E4022F801E51C2B4000875D7 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		E4120DDE1E4C03AE009C8DD3 /* HealthKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4120DE11E4C03AE009C8DD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E4120DE31E4C03AE009C8DD3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -50,6 +57,7 @@
 		E4120E0F1E4C03FF009C8DD3 /* HealthKitDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HealthKitDemo.entitlements; sourceTree = "<group>"; };
 		E4120E111E4C03FF009C8DD3 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		E4120E131E4C6B11009C8DD3 /* ViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
+		E4120E151E514314009C8DD3 /* HeightViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeightViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +65,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4022F811E51C2B4000875D7 /* NotificationCenter.framework in Frameworks */,
+				E4022F7F1E51C2AD000875D7 /* UserNotifications.framework in Frameworks */,
 				E4120E121E4C03FF009C8DD3 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -109,6 +119,8 @@
 				E4120DEA1E4C03AE009C8DD3 /* LaunchScreen.storyboard */,
 				E4120DED1E4C03AE009C8DD3 /* Info.plist */,
 				E4120E131E4C6B11009C8DD3 /* ViewExtension.swift */,
+				E4120E151E514314009C8DD3 /* HeightViewController.swift */,
+				E4022F7C1E51C298000875D7 /* NotificationHandler.swift */,
 			);
 			path = HealthKitDemo;
 			sourceTree = "<group>";
@@ -134,6 +146,8 @@
 		E4120E101E4C03FF009C8DD3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E4022F801E51C2B4000875D7 /* NotificationCenter.framework */,
+				E4022F7E1E51C2AD000875D7 /* UserNotifications.framework */,
 				E4120E111E4C03FF009C8DD3 /* HealthKit.framework */,
 			);
 			name = Frameworks;
@@ -213,6 +227,9 @@
 							com.apple.HealthKit = {
 								enabled = 1;
 							};
+							com.apple.Push = {
+								enabled = 1;
+							};
 						};
 					};
 					E4120DF11E4C03AE009C8DD3 = {
@@ -279,6 +296,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4120E141E4C6B11009C8DD3 /* ViewExtension.swift in Sources */,
+				E4120E161E514314009C8DD3 /* HeightViewController.swift in Sources */,
+				E4022F7D1E51C299000875D7 /* NotificationHandler.swift in Sources */,
 				E4120DE41E4C03AE009C8DD3 /* ViewController.swift in Sources */,
 				E4120DE21E4C03AE009C8DD3 /* AppDelegate.swift in Sources */,
 			);

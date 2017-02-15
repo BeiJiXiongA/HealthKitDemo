@@ -58,6 +58,7 @@
 		E4120E111E4C03FF009C8DD3 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		E4120E131E4C6B11009C8DD3 /* ViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
 		E4120E151E514314009C8DD3 /* HeightViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeightViewController.swift; sourceTree = "<group>"; };
+		E4C879671E544E8900649282 /* CommonFile.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonFile.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +122,7 @@
 				E4120E131E4C6B11009C8DD3 /* ViewExtension.swift */,
 				E4120E151E514314009C8DD3 /* HeightViewController.swift */,
 				E4022F7C1E51C298000875D7 /* NotificationHandler.swift */,
+				E4C879671E544E8900649282 /* CommonFile.pch */,
 			);
 			path = HealthKitDemo;
 			sourceTree = "<group>";
@@ -445,11 +447,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = HealthKitDemo/HealthKitDemo.entitlements;
 				DEVELOPMENT_TEAM = X2AB8TRR33;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/HealthKitDemo/CommonFile.pch";
 				INFOPLIST_FILE = HealthKitDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhangwei.HealthKitDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/HealthKitDemo/CommonFile.pch";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -460,11 +465,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = HealthKitDemo/HealthKitDemo.entitlements;
 				DEVELOPMENT_TEAM = X2AB8TRR33;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/HealthKitDemo/CommonFile.pch";
 				INFOPLIST_FILE = HealthKitDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhangwei.HealthKitDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/HealthKitDemo/CommonFile.pch";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

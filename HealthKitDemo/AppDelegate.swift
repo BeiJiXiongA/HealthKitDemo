@@ -34,15 +34,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         
         self.window = UIWindow.init(frame: UIScreen.main.bounds)
         
-        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) {
-            granted, error in
-            if granted {
-                // 用户允许进行通知
+        if #available(iOS 10.0, *) {
+            UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) {
+                granted, error in
+                if granted {
+                    // 用户允许进行通知
+                }
             }
+            
+            UNUserNotificationCenter.current().delegate = self
+        }else if #available(iOS 8.0, *){
+            let myTypes:UIUserNotificationType = .alert
+            let settings:UIUserNotificationSettings = UIUserNotificationSettings.init(types: myTypes, categories: nil)
+            UIApplication.shared.registerUserNotificationSettings(settings)
+        }else {
+            
+//            UIRemoteNotificationType myTypes = UIRemoteNotificationTypeBadge|UIRemoteNotificationTypeAlert|UIRemoteNotificationTypeSound;
+//            [[UIApplication sharedApplication] registerForRemoteNotificationTypes:myTypes];
         }
         
-        UNUserNotificationCenter.current().delegate
-            = self
         
         let controller:ViewController = ViewController()
         let nav:UINavigationController = UINavigationController.init(rootViewController: controller)
@@ -81,33 +91,35 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     func testNotificaiton() {
         //1. 创建通知内容
         
-        let content = UNMutableNotificationContent()
-        
-        content.title = "Time Interval Notification"
-        
-        content.body = "My first notification"
-        
-        //2. 创建发送触发
-        
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 1,
-                                                        repeats: false)
-        //3. 发送请求标识符
-        
-        let requestIdentifier = "com.onevcat.usernotification.myFirstNotification"
-        
-        //4. 创建一个发送请求
-        
-        let request = UNNotificationRequest(identifier: requestIdentifier, content: content, trigger: trigger)
-        
-        //将请求添加到发送中心
-        
-        UNUserNotificationCenter.current().add(request)
-        { error in
+        if #available(iOS 10.0, *) {
+            let content = UNMutableNotificationContent()
             
-            if error == nil {
+            content.title = "Time Interval Notification"
+            
+            content.body = "My first notification"
+            
+            //2. 创建发送触发
+            
+            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 1,
+                                                            repeats: false)
+            //3. 发送请求标识符
+            
+            let requestIdentifier = "com.onevcat.usernotification.myFirstNotification"
+            
+            //4. 创建一个发送请求
+            
+            let request = UNNotificationRequest(identifier: requestIdentifier, content: content, trigger: trigger)
+            
+            //将请求添加到发送中心
+            
+            UNUserNotificationCenter.current().add(request)
+            { error in
                 
-                print("TimeInterval Notification scheduled:\(requestIdentifier)")
-                
+                if error == nil {
+                    
+                    print("TimeInterval Notification scheduled:\(requestIdentifier)")
+                    
+                }
             }
         }
     }

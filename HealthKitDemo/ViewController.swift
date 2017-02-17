@@ -44,7 +44,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
+        self.title = "体重"
         self.view.backgroundColor = UIColor.white
         rightLabel.text = "kg"
         rightLabel.font = UIFont.systemFont(ofSize: 13)

@@ -19,6 +19,7 @@
 		E4120E121E4C03FF009C8DD3 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4120E111E4C03FF009C8DD3 /* HealthKit.framework */; };
 		E4120E141E4C6B11009C8DD3 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4120E131E4C6B11009C8DD3 /* ViewExtension.swift */; };
 		E4120E161E514314009C8DD3 /* HeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4120E151E514314009C8DD3 /* HeightViewController.swift */; };
+		E4F822851E569EB200C99873 /* BirthOfDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F822841E569EB200C99873 /* BirthOfDateViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		E4120E131E4C6B11009C8DD3 /* ViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
 		E4120E151E514314009C8DD3 /* HeightViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeightViewController.swift; sourceTree = "<group>"; };
 		E4C879671E544E8900649282 /* CommonFile.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonFile.pch; sourceTree = "<group>"; };
+		E4F822841E569EB200C99873 /* BirthOfDateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BirthOfDateViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 				E4120E151E514314009C8DD3 /* HeightViewController.swift */,
 				E4022F7C1E51C298000875D7 /* NotificationHandler.swift */,
 				E4C879671E544E8900649282 /* CommonFile.pch */,
+				E4F822841E569EB200C99873 /* BirthOfDateViewController.swift */,
 			);
 			path = HealthKitDemo;
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4120E141E4C6B11009C8DD3 /* ViewExtension.swift in Sources */,
+				E4F822851E569EB200C99873 /* BirthOfDateViewController.swift in Sources */,
 				E4120E161E514314009C8DD3 /* HeightViewController.swift in Sources */,
 				E4022F7D1E51C299000875D7 /* NotificationHandler.swift in Sources */,
 				E4120DE41E4C03AE009C8DD3 /* ViewController.swift in Sources */,

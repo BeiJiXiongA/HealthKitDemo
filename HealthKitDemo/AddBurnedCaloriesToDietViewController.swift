@@ -11,7 +11,7 @@ import HealthKit
 
 extension NSDate{
     func dateByAddingMinutes(minutes: Double) -> NSDate {
-        return self.dateByAddingMinutes(minutes: minutes * 60.0)
+        return self.addingTimeInterval(minutes * 60.0)
     }
 }
 
@@ -92,6 +92,10 @@ class AddBurnedCaloriesToDietViewController: UITableViewController {
         cell?.textLabel?.text = burner.name
         cell?.detailTextLabel?.text = caloridsAsString
         return cell!
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self .addToDiet()
     }
     
     func addToDiet() {

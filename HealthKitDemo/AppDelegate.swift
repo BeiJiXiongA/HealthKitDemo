@@ -55,7 +55,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         
         
 //        let controller:ViewController = ViewController()
-        let controller:BirthOfDateViewController = BirthOfDateViewController()
+//        let controller:BirthOfDateViewController = BirthOfDateViewController()
+        let controller:CalorieViewController = CalorieViewController()
         let nav:UINavigationController = UINavigationController.init(rootViewController: controller)
         self.window?.rootViewController = nav
         
